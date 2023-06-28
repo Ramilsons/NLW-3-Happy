@@ -10,9 +10,7 @@ const server = express()
     server.use(express.urlencoded({ extended: true }))
 //utilizando os arquivos estáticos
 server.use(express.static(__dirname + '../../' +'public'))
-
-//configurando template engine
-server.set('views', path.join(__dirname, "views"))
+server.use(express.json());
 server.set('view engine', 'hbs')
 
 //rotas da aplicação
