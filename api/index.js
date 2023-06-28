@@ -10,7 +10,7 @@ const server = express()
     server.use(express.urlencoded({ extended: true }))
 //utilizando os arquivos estáticos
 server.use(express.static(__dirname + '../../' +'public'))
-server.use(express.json());
+server.set('views', path.join(__dirname, "views"))
 server.set('view engine', 'hbs')
 
 //rotas da aplicação
