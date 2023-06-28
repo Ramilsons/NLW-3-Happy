@@ -2,6 +2,8 @@
 const express = require('express')
 const path = require('path')
 const pages = require('./pages.js')
+const PORT = process.env.PORT || 3000;
+
 //iniciando o express
 const server = express()
     //utilizar body do req
@@ -21,4 +23,4 @@ server.get('/create-orphanage', pages.createOrphanage)
 server.post('/save-orphanage', pages.saveOrphanage)
 
 //ligando o servidor
-server.listen(5500)
+server.listen(PORT)
